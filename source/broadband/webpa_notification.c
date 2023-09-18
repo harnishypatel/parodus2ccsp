@@ -1142,6 +1142,8 @@ void processNotification(NotifyData *notifyData)
 	        {
 	        	case PARAM_NOTIFY:
 	        	{
+				WalInfo("Sleeping for 5 sec before sending SYNC_NOTIFICATION\n");
+				sleep(5);
 	        		strcpy(dest, "event:SYNC_NOTIFICATION");
 
 	        		ret = processParamNotification(notifyData->u.notify, &cmc, &cid);
